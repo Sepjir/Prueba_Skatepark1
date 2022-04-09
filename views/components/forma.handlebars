@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/bootstrap/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="public/css/estilos.css" />
+  </head>
+  
+  <body>
+{{#if skater}}
+  <div class="py-4">
+      <h2>Datos del perfil</h2>
+      <hr class="w-50 container" />
+      <form action="/actualizando" method="post">
+        <div class="form-group row w-50 m-auto">
+          <div class="form-group col-12 col-sm-6">
+            <label>Email</label>
+            <input
+              class="form-control m-auto"
+              name="email"
+              value={{skater.email}}
+              readonly
+            >
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Nombre</label>
+            <input class="form-control m-auto" name="nombre" value={{skater.nombre}} />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Password</label>
+            <input
+              type="password"
+              class="form-control m-auto"
+              value={{skater.password}}
+              name="password"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Repita la password</label>
+            <input
+              type="password"
+              class="form-control m-auto"
+              value={{skater.password}}
+              name="password2"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Años de experiencia</label>
+            <input class="form-control m-auto" type="number" min="0" max="40" value={{skater.anos_experiencia}} name="experiencia" />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Especialidad</label>
+            <input class="form-control m-auto" value={{skater.especialidad}} name="especialidad" />
+          </div>
+        </div>
+        <div class="mb-1 mt-2">
+          <button class="btn btn-primary">Actualizar</button>
+        </div>
+        <div>
+        </div>
+      </form>
+          <a href="/delete?id={{skater.id}}"><button class="btn btn-danger">Eliminar cuenta</button></a>
+    </div>
+    {{/if}}
+  </body>

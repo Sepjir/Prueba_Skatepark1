@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/estilos.css" />
+    <title>Skate Park</title>
+    <link
+      rel="stylesheet"
+      href="/bootstrap/bootstrap.min.css"
+    />
+  </head>
+  <body>
+<div class="py-5">
+      <h2>Iniciar Sesión</h2>
+      <hr class="w-50 container" />
+
+      <form action="/signin">
+        <div class="form-group">
+          <div class="form-group">
+            <label>Email</label>
+            <input class="form-control w-50 m-auto" name="email" required />
+          </div>
+          <div class="form-group">
+            <label class="mt-2">Password</label>
+            <input class="form-control w-50 m-auto" type="password" name="password" required />
+          </div>
+        </div>
+        <button class="btn btn-success mb-3 mt-3">Ingresar</button>
+        <p>¿Aún no tienes cuenta? <a href="/registro">Regístrate</a></p>
+      </form>
+    </div>
+  </body>
