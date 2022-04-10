@@ -13,3 +13,5 @@ c. usuario: evelein@gmail.com Pass: nemesis3
 Para dar privilegios de "Aprobado" o "En revisión" entrar con estas credenciales
 
 usuario: admin@admin.com Pass: 123456
+
+Para realizar pruebas con Cypress utilizar el comando en terminal "npm run cypress:open"
